@@ -1,2 +1,2 @@
-# Meme-Generator-using-react-
-Random meme generator made with react
+# Meme-Generator
+Random meme generator made with vanilla javascript
