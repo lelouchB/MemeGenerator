@@ -31,38 +31,24 @@ function generating() {
             let random = Math.floor(Math.random() * 99)
             allMemeImgs = memes[random].url
             console.log(allMemeImgs)
+            img.src=allMemeImgs
         })
 
 }
 
-var loading, loaded;
-var mimg;
-var samples;
+
 
 function setup() {
 
     createCanvas(400, 400)
-    console.log('setup');
-    loading = false;
-    loaded = false;
+   
 
 }
 
 
 
 function draw() {
-    if (!loading && !loaded) {
-        loading = true;
-        console.log('start loading');
-        loadImage('https://i.imgflip.com/s4f1k.jpg', function (i) {
-            loaded = true;
-            mimg = i;
-        }, function (e) {
-            console.log(e);
-        })
-    }
-    if (loaded) {
-        image(mimg, 0, 0, 400, 300);
+   
         textSize(32);
         fill(255, 0, 0)
 
@@ -70,5 +56,5 @@ function draw() {
         text(bottomText.value, 150, 180);
 
 
-    }
+    
 }
